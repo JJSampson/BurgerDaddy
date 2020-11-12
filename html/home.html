@@ -1,23 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Burger Daddy</title>
-</head>
+<html>
+<title>Burger Daddy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<link rel="stylesheet" href="../css/stylesheet.css">
+<script type="text/javascript" src="../js/burgerDaddy.js"></script>
+
+<style>
+    body {font-family: "Times New Roman", Georgia, Serif;}
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Times New Roman";
+        letter-spacing: 5px;
+    }
+</style>
+
 <body>
+<!-- Navbar -->
+<div class="bd-top">
+    <div class="bd-bar bd-white bd-padding bd-card" style="letter-spacing:4px;">
+        <a href="#home" class="bd-bar-item bd-button">Burger Daddy</a>
 
-<!-- loads icon library (W3Schools), shows hamburger menu on smaller displays -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="bd-right bd-hide-small">
+            <a href="#about" class="bd-bar-item bd-button">About</a>
+            <a href="#menu" class="bd-bar-item bd-button">Menu</a>
+            <a href="#contact" class="bd-bar-item bd-button">Contact</a>
+        </div>
+    </div>
 </div>
 
+<!-- Header -->
+<header class="bd-display-container bd-content bd-wide" style="max-width:1600px;min-width:500px" id="home">
+    <!--<img class="header" src="../images/header.png" alt="Hamburgers" width="1600" height="800">-->
+    <img class="header" src="../images/header.png" alt="Hamburgers" width="1080" height="608">
+    <div class="bd-display-bottomleft bd-padding-large bd-opacity">
+        <h1 class="bd-xxlarge">Catering Available!</h1>
+    </div>
+</header>
+
+<!-- Page content -->
+<div class="bd-content" style="max-width:1100px">
+
+    <!-- About Section -->
+    <div class="bd-row bd-padding-64" id="about">
+        <div class="bd-col m6 bd-padding-large bd-hide-small">
+            <!--<img src="../images/foodtruck.jpg" class="bd-round bd-image bd-opacity-min" alt="Food Truck" width="600" height="750">-->
+            <img src="../images/foodtruck.jpg" class="bd-round bd-image bd-opacity-min" alt="Food Truck" width="1080" height="927">
+        </div>
+        <div class="bd-col m6 bd-padding-large">
+            <h1 class="bd-center">Welcome to Burger Daddy!</h1><br>
+            <h5 class="bd-center">Founded in 2020</h5>
+            <p class="bd-large">Burger Daddy was founded by Brandon Wagner in.. lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="bd-tag bd-light-grey">seasonal</span> ingredients.</p>
+            <p class="bd-large bd-text-grey bd-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Menu Section -->
+    <div class="bd-row bd-padding-64" id="menu">
+        <div class="bd-col l6 bd-padding-large">
+            <h1 class="bd-center">Our Menu</h1><br>
+            <h4>Gourmet Burger</h4>
+            <p class="bd-text-grey">Our signature burger 10.50</p><br>
+
+            <h4>Fries</h4>
+            <p class="bd-text-grey">Handcut fries 3.00</p><br>
+
+            <h4>Chips</h4>
+            <p class="bd-text-grey">Homemade potato chips 3.50</p><br>
+
+            <h4>Wings</h4>
+            <p class="bd-text-grey">A dozen wings tossed in a sauce of your choice 8.50</p><br>
+
+            <h4>Fountain Drink</h4>
+            <p class="bd-text-grey">Ice cold drink 1.50</p>
+        </div>
+
+        <div class="bd-col l6 bd-padding-large">
+            <img src="../images/logo.jpg" class="bd-round bd-image bd-opacity-min" alt="Logo" style="width:100%">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Contact Section -->
+    <div class="bd-container bd-padding-64" id="contact">
+        <h1>Contact</h1><br>
+        <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all,
+            both look and taste. Do not hesitate to contact us.</p>
+        <p class="bd-text-blue-grey bd-large"><b>Catering Service, 1014 Laurel Ln, Brookville, PA  15825</b></p>
+        <p>You can also contact us by phone 814-603-2529 or email catering@burgerdaddy.com, or you can send us a message here:</p>
+        <form action="/action_page.php" target="_blank">
+            <p><input class="bd-input bd-padding-16" type="text" placeholder="Name" required name="Name"></p>
+            <p><input class="bd-input bd-padding-16" type="number" placeholder="How many people" required name="People"></p>
+            <p><input class="bd-input bd-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+            <p><input class="bd-input bd-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+            <p><button class="bd-button bd-light-grey bd-section" type="submit">SEND MESSAGE</button></p>
+        </form>
+    </div>
+
+    <!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="bd-center bd-light-grey bd-padding-32">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="bd.CSS" target="_blank" class="bd-hover-text-green">w3.css</a></p>
+    <p>&copy; 2020<script>new Date().getFullYear()>2020&&document.write("-"+new Date().getFullYear());</script>, Burger Daddy.</p>
+</footer>
+
 </body>
+
 </html>
